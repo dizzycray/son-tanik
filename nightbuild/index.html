@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nightbuild.dev — Mert K.</title>
+<meta name="description" content="Oyun motoru, kayıt sistemleri ve gece build'leri.">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ctfbar">CTF · SON TANIK: 23:17 — kurgusal site <span><a href="../">Dava dosyası</a><a href="../cevap/">Cevap gönder</a></span></div>
+
+<header class="hero">
+  <nav class="nav">
+    <a href="#" class="me">~/nightbuild<span class="blink">_</span></a>
+    <span><a href="#hakkimda">hakkımda</a><a href="#projeler">projeler</a><a href="#surumler">sürümler</a><a href="#notlar">notlar</a></span>
+  </nav>
+  <div class="hero-in">
+    <p class="prompt">$ whoami</p>
+    <h1>Mert K.</h1>
+    <p class="role">oyun motoru · kayıt sistemleri · build hatları</p>
+    <p class="clock" aria-hidden="true">23:17</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="hakkimda" class="block">
+    <h2><span>01</span> hakkımda</h2>
+    <p><a href="../pixgram/#/u/kirkindidev">Kırkindi Game Studio</a>'nun kurucu ortağı ve teknik tarafıyım. Stüdyoyu, Global Game Jam 2023'te “Gece Vardiyası” takımında tanıştığım Elisa İdil Eskin'le birlikte kurduk. Elisa hikâyeyi yazar, ben o hikâyenin çökmeden çalışmasını sağlarım.</p>
+    <p>Sosyal medya kullanmıyorum. Kodum, sürüm kayıtlarım ve hata düzeltmelerim KodHane'de: <a href="../kodhane/#/mk-nightbuild"><code>mk-nightbuild</code></a></p>
+    <dl class="kv">
+      <dt>konum</dt><dd>Samsun</dd>
+      <dt>en verimli saat</dt><dd>23:00–00:00</dd>
+      <dt>imza anahtarı</dt><dd><code>mk</code></dd>
+      <dt>stüdyo kartı</dt><dd>#02</dd>
+    </dl>
+  </section>
+
+  <section id="projeler" class="block">
+    <h2><span>02</span> projeler</h2>
+    <div class="cards">
+      <article class="card featured">
+        <p class="tag">Kırkindi Game Studio · 2024–2026</p>
+        <h3>SON TANIK: 23:17</h3>
+        <p>Hikâye tabanlı, point-and-click dedektiflik oyunu. Rolüm: oyun motoru, kayıt (save) sistemi, imzalı build hattı.</p>
+        <ul class="chips"><li>motor</li><li>kayıt sistemi</li><li>build hattı</li><li>v0.23.17-gm</li></ul>
+        <a href="#surumler">Sürüm geçmişi →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Global Game Jam 2023</p>
+        <h3>Gece Vardiyası</h3>
+        <p>48 saatlik jam oyunu. Takım: Elisa İdil Eskin (anlatı), Deniz Aral (test), ben (kod). Kırkindi'nin başladığı yer.</p>
+        <a href="../kodhane/#/mk-nightbuild/ggj23-gece-vardiyasi">Kaynak kod →</a>
+      </article>
+      <article class="card">
+        <p class="tag">Açık kaynak</p>
+        <h3>gece-derleyici</h3>
+        <p>Küçük stüdyolar için test → imzala → yayınla hattı. SON TANIK'ın bütün sürümleri bununla çıktı.</p>
+        <a href="../kodhane/#/mk-nightbuild/gece-derleyici">Depo →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="surumler" class="block">
+    <h2><span>03</span> SON TANIK: 23:17 — sürüm geçmişi</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Sürüm</th><th>Tarih / saat</th><th>Commit</th><th>İmza</th><th>Not</th></tr></thead>
+        <tbody>
+          <tr><td>v0.1.0-proto</td><td>2024-05-03 22:40</td><td><code>1d0c5e2</code></td><td>mk</td><td>İlk oynanabilir prototip: tek oda, üç nesne.</td></tr>
+          <tr><td>v0.5.0-alpha</td><td>2025-01-19 23:05</td><td><code>77ab0e1</code></td><td>mk</td><td>Kanıt panosu ve sorgu sistemi.</td></tr>
+          <tr><td>v0.9.0-beta</td><td>2025-10-02 23:31</td><td><code>c4e9f10</code></td><td>mk</td><td>Sunucu odası, ses paketi entegrasyonu.</td></tr>
+          <tr class="dim"><td>v0.23.16-rc</td><td>2026-03-14 21:58</td><td><code>9c1e0b4</code></td><td>mk</td><td>Aday sürüm. <b>Geri çekildi</b> — KRK-231 (bölüm 3 kayıt dosyası bozulması).</td></tr>
+          <tr class="hl"><td>v0.23.17-gm</td><td>2026-03-14 23:17:04</td><td><code>a3f2317</code></td><td>mk</td><td>Gold master. fix: kayıt dosyası bozulması (KRK-231). Yayıncıya teslim edildi.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Sürüm numarasının sonu bir tesadüf değil; GM build'i gerçekten 23:17'de imzalandı.</p>
+  </section>
+
+  <section id="notlar" class="block">
+    <h2><span>04</span> geliştirme notları</h2>
+    <article class="post">
+      <p class="date">2026-03-21</p>
+      <h3>14 Mart, 23:17</h3>
+      <p>RC build'i 21:58'de imzalayıp eve çıktım. 22:47'de Deniz'in açtığı KRK-231 telefonuma düştü: bölüm 3'te kayıt dosyası sıfırlanıyordu. Sabah 09:00'da gold master teslimi vardı.</p>
+      <p>Kahvemi alıp ofise döndüm (kartım 23:02'yi gösterir). Hatayı yeniden ürettim, düzelttim, regresyon testi 23:16'da geçti. 23:17'de hatalı RC'yi sildim, düzeltilmiş GM'yi kendi anahtarımla imzaladım.</p>
+      <p>Kimseye haber vermedim; sabah nasılsa görürler diye düşündüm. Görmediler, yayıncı sabotaj sandı. Sonunda biri sunucu kayıtlarını okudu ve mesele çözüldü. Elisa da o geceyi oyunun adına koydu.</p>
+      <p class="sign">— mk</p>
+    </article>
+    <article class="post">
+      <p class="date">2025-10-03</p>
+      <h3>Neden hep gece?</h3>
+      <p>Gündüz toplantı, gece derleyici. Bir de 23:17'nin iki asal sayıdan oluşması hoşuma gidiyor (bkz. <a href="../kodhane/#/mk-nightbuild/asal-saat">asal-saat</a>).</p>
+    </article>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>© 2026 mk · bu site gece derlendi · <a href="../kodhane/#/mk-nightbuild">KodHane</a></p>
+</footer>
+</body>
+</html>
