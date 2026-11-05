@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cevap — SON TANIK: 23:17</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Special+Elite&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/game.css">
+<style>
+  body { background: radial-gradient(ellipse at top, #18202c, #07090d 70%) fixed; }
+  .answer-wrap { max-width: 680px; margin: 0 auto; padding: 48px 16px 60px; }
+  .answer-wrap h1 { font-family: var(--type); font-weight: 400; font-size: clamp(2rem, 7vw, 3rem); margin: 0 0 .2em; }
+  .answer-wrap h1 span { color: var(--amber); font-family: var(--mono); font-size: .6em; letter-spacing: .2em; display: block; }
+  .file { background: var(--paper); color: var(--ink); border-radius: 6px; padding: 26px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,.5); margin: 24px 0; }
+  .file::before { content: 'DOSYA #2317'; position: absolute; top: -12px; left: 20px; background: #b9a57c; color: #2a2316; font-family: var(--mono); font-size: .72rem; padding: 2px 10px; border-radius: 4px 4px 0 0; letter-spacing: .15em; }
+  .file p.q { font-family: var(--type); font-size: 1.05rem; margin-top: 0; }
+  .field { display: flex; align-items: center; background: #fffdf6; border: 2px solid #3a3226; border-radius: 10px; overflow: hidden; margin-top: 16px; }
+  .field span { padding: 0 4px 0 14px; font-family: var(--mono); color: #7a6d55; }
+  .field input { flex: 1; border: 0; background: transparent; padding: 14px 12px 14px 2px; font-family: var(--mono); font-size: 1.05rem; color: var(--ink); outline: none; min-width: 0; }
+  .field:focus-within { border-color: #a5281c; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; align-items: center; }
+  .rules { font-size: .85rem; color: #5d574b; margin: 12px 0 0; padding-left: 1.1em; }
+  .result { margin-top: 18px; border-radius: 10px; padding: 14px 16px; display: none; }
+  .result.show { display: block; animation: fade .3s; }
+  .result.bad { background: rgba(196,72,58,.12); border: 1px solid rgba(196,72,58,.5); color: #7a1f15; }
+  .result.decoy { background: #241d10; border: 1px dashed var(--amber); color: #f3d9a4; }
+  .result.ok { background: #0d1f15; border: 1px solid var(--green); color: #c8f2d8; }
+  .flag { font-family: var(--mono); font-size: 1.05rem; background: #050a07; color: #6ee7a0; padding: 10px 12px; border-radius: 8px; margin-top: 8px; word-break: break-all; user-select: all; }
+  .back { display: flex; gap: 10px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<main class="answer-wrap">
+  <div class="back"><a class="btn ghost small" href="../">← Dava dosyası</a><a class="btn ghost small" href="../pixgram/">Pixgram</a></div>
+  <h1><span>CTF · OSINT</span>Son ismi yaz.</h1>
+  <p class="muted">Oyunu bitirdin, izleri takip ettin. Şimdi dosyayı kapat.</p>
+
+  <form class="file" id="f" autocomplete="off">
+    <p class="q">“SON TANIK: 23:17 oyunundaki dijital izleri takip ederek oyunun geliştiricisi Kırkindi Game Studio'nun kurucu ortaklarından diğerinin geliştirici kullanıcı adını tespit edin.”</p>
+    <label for="a" class="small" style="color:#5d574b">Geliştirici kullanıcı adı</label>
+    <div class="field"><span>@</span><input id="a" name="answer" maxlength="64" placeholder="kullanici-adi" spellcheck="false" autocapitalize="off" required></div>
+    <ul class="rules">
+      <li>Yalnızca geliştirici hesabının kullanıcı adı kabul edilir.</li>
+      <li>Gerçek ad ya da profilde görünen ad kabul edilmez.</li>
+      <li>Büyük/küçük harf ve baştaki @ önemsizdir.</li>
+    </ul>
+    <div class="row"><button class="btn primary" id="go" type="submit">Doğrula</button><span class="small" id="tries" style="color:#5d574b"></span></div>
+    <div class="result" id="r" role="status" aria-live="polite"></div>
+  </form>
+</main>
+<script src="cevap.js"></script>
+</body>
+</html>
