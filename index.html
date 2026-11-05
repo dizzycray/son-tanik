@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SON TANIK: 23:17</title>
+<meta name="description" content="Kırkindi Game Studio — hikâye tabanlı dedektiflik oyunu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Special+Elite&family=Caveat:wght@500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<!--
+  SON TANIK: 23:17 — Kırkindi Game Studio
+  build: v0.23.17-gm
+  TODO(mk): yayından önce şu test flag'ini sil →  SONTANIK{bu_kadar_hafife_mi_aldiniz}
+-->
+<div id="app">
+
+  <!-- ===== BAŞLIK ===== -->
+  <section id="scr-title" class="screen active">
+    <div class="rain" aria-hidden="true"></div>
+    <div class="title-wrap">
+      <p class="studio">KIRKİNDİ GAME STUDIO sunar</p>
+      <h1 class="logo">SON TANIK<span>23:17</span></h1>
+      <p class="tagline">Herkes bir şey gördü. Yalnızca biri yalan söylemedi.</p>
+      <div class="title-actions">
+        <button class="btn primary" id="btn-new">Soruşturmaya başla</button>
+        <button class="btn ghost" id="btn-continue" hidden>Kaldığın yerden devam et</button>
+      </div>
+      <p class="hint-small">Tahmini süre: 10–15 dk · Kulaklık önerilmez, dikkat önerilir.</p>
+    </div>
+  </section>
+
+  <!-- ===== GİRİŞ ===== -->
+  <section id="scr-intro" class="screen">
+    <div class="intro-card">
+      <p class="stamp">GİZLİ · DOSYA #2317</p>
+      <div id="intro-doc"></div>
+      <div class="intro-goal">
+        <h3>Görevin</h3>
+        <ol>
+          <li>Ofisi ve sunucu odasını incele, kanıt topla.</li>
+          <li>Tanıkları sorgula; ifadeleri kanıtlarla sına.</li>
+          <li>Kanıt panosunda kanıtları birbirine bağla.</li>
+          <li>Dava raporunu yaz.</li>
+        </ol>
+      </div>
+      <button class="btn primary" id="btn-enter">Olay yerine gir</button>
+    </div>
+  </section>
+
+  <!-- ===== OYUN ===== -->
+  <section id="scr-game" class="screen">
+    <header class="hud">
+      <div class="hud-left">
+        <span class="hud-logo">SON TANIK <b>23:17</b></span>
+        <span class="hud-room" id="hud-room"></span>
+      </div>
+      <nav class="hud-nav">
+        <button class="hud-btn" data-open="inventory"><span class="ico">▤</span><span class="lbl">Envanter</span><b class="badge" id="badge-inv">0</b></button>
+        <button class="hud-btn" data-open="witness"><span class="ico">☺</span><span class="lbl">Tanıklar</span><b class="badge" id="badge-wit">0/5</b></button>
+        <button class="hud-btn" data-open="board"><span class="ico">✣</span><span class="lbl">Pano</span><b class="badge" id="badge-board">0/4</b></button>
+        <button class="hud-btn accent" data-open="report" id="btn-report"><span class="ico">✔</span><span class="lbl">Rapor</span></button>
+        <button class="hud-btn" data-open="menu" aria-label="Menü"><span class="ico">≡</span></button>
+      </nav>
+    </header>
+
+    <div class="stage">
+      <div class="scene-scroll" id="scene-scroll">
+        <div class="scene" id="scene"></div>
+      </div>
+      <aside class="notebook" id="notebook">
+        <h3>Dedektif defteri</h3>
+        <ul id="objectives"></ul>
+        <div class="nb-actions">
+          <button class="btn small ghost" id="btn-list">İncelenebilir noktalar</button>
+          <label class="toggle"><input type="checkbox" id="chk-hints"> İpucu işaretleri</label>
+        </div>
+      </aside>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </section>
+
+  <!-- ===== SONUÇ ===== -->
+  <section id="scr-end" class="screen">
+    <div class="end-wrap">
+      <p class="stamp green">DOSYA KAPANDI</p>
+      <h2>Son tanık: <em>sunucu</em>.</h2>
+      <p class="lead">Sabotaj yoktu. 23:17'de silinen sürüm, Deniz'in yakaladığı kayıt hatasını taşıyan aday build'di. Stüdyonun teknik ortağı gece ofise dönüp hatayı düzeltti ve oyunu kurtaran gold master'ı kendi anahtarıyla imzaladı. Sonra kimseye söylemeden çıktı.</p>
+      <p class="lead">Kemal tur sırasında kapıda olmadığını sakladı; Deniz yalnızca hata biletini açtığını gizledi. Elisa ise ortağının adını vermedi.</p>
+
+      <div class="case-card">
+        <h3>Açık kalan soru: teknik ortak kim?</h3>
+        <ul class="facts">
+          <li><span>İmza</span><b>mk</b></li>
+          <li><span>Kart</span><b>#02 · KURUCU ORTAK (T)</b></li>
+          <li><span>Build</span><b>v0.23.17-gm</b></li>
+          <li><span>Commit</span><b>a3f2317</b></li>
+          <li><span>Kuruluş</span><b>“Gece Vardiyası” · Global Game Jam 2023</b></li>
+          <li><span>Stüdyo hesabı</span><b>Pixgram · @kirkindidev</b></li>
+        </ul>
+        <p class="muted">Elisa: “Ortağım görünmez olmayı sever. İzini sürerseniz bulursunuz.”</p>
+      </div>
+
+      <div class="ctf-question">
+        <p class="stamp">CTF SORUSU</p>
+        <p>“SON TANIK: 23:17 oyunundaki dijital izleri takip ederek oyunun geliştiricisi Kırkindi Game Studio'nun kurucu ortaklarından diğerinin <b>geliştirici kullanıcı adını</b> tespit edin.”</p>
+        <p class="muted small">Gerçek ad ya da profilde görünen ad kabul edilmez. Yalnızca kullanıcı adı.</p>
+      </div>
+
+      <div class="end-actions">
+        <a class="btn primary" href="pixgram/">Pixgram'da araştırmaya başla →</a>
+        <a class="btn ghost" href="cevap/">Cevabı gönder</a>
+        <button class="btn ghost" id="btn-back-game">Olay yerine dön</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <h2 id="modal-title"></h2>
+      <button class="x" id="modal-close" aria-label="Kapat">✕</button>
+    </header>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
